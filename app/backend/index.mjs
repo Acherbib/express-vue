@@ -1,13 +1,13 @@
 // Require all dependencies:
 
-const appRoot = require('app-root-path');
-const express = require('express');
-const compression = require('compression');
-const bodyParser = require('body-parser');
+import appRoot from 'app-root-path';
+import express from 'express';
+import compression from 'compression';
+import bodyParser from 'body-parser';
 
-const config = require('./config');
-const routes = require('./routes');
-const debug = require('./routes/middleware/debug');
+import config from './config';
+import routes from './routes';
+import debug from './routes/middleware/debug';
 
 
 
@@ -54,4 +54,4 @@ if (config.environment === 'local') {
 
 // Export the app:
 
-module.exports = app;
+export default app;

@@ -3,8 +3,8 @@
 - [x] Rename frontend main.js file to index.js - have it export `app` instead of `main`. Rename `app` component to `layout`.
 - [x] Get tests running for frontend
 - [x] Create dummy API endpoint
+- [ ] Convert backend code to use import/export. This is stuck due to Jest not fully support Node's `.mjs` file extension: https://github.com/facebook/jest/issues/4842
 - [ ] Get tests running/written for all of backend
-- [ ] Convert all JS code to use require() instead of import/export
 - [ ] Try using vue cli serve command for local dev
 - [ ] Cleanup dist folder after every build
 - [ ] Sort out all package.json scripts / commands for starting / building

@@ -2,7 +2,8 @@ module.exports = {
   displayName: 'backend',
 
   moduleFileExtensions: [
-    'js'
+    'js',
+    'mjs'
   ],
 
   setupTestFrameworkScriptFile: './jest.setup.backend.js',
@@ -10,6 +11,10 @@ module.exports = {
   testEnvironment: 'node',
 
   testMatch: [
-    '<rootDir>/app/backend/**/*.test.js'
-  ]
+    '<rootDir>/app/backend/**/*.test.?(m)js'
+  ],
+
+  transform: {
+    '^.+\.m?js$': 'babel-jest'
+  }
 };

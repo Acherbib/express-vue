@@ -1,18 +1,18 @@
 // subject:
 
-const app = require('./index');
+import app from './index.mjs';
 
 
 
 // dependencies:
 
-const bodyParser = require('body-parser');
-const compression = require('compression');
-const express = require('express');
+import bodyParser from 'body-parser';
+import compression from 'compression';
+import express from 'express';
 
-const config = require('./config');
-const debug = require('./routes/middleware/debug');
-const routes = require('./routes');
+import config from './config/index.mjs';
+import debug from './routes/middleware/debug.mjs';
+import routes from './routes/index.mjs';
 
 
 
@@ -22,13 +22,13 @@ jest.mock('body-parser');
 jest.mock('compression');
 jest.mock('express');
 
-jest.mock('./config', () => {
+jest.mock('./config/index.mjs', () => {
   return {
     port: 7777
   }
 });
 
-jest.mock('./routes', () => {
+jest.mock('./routes/index.mjs', () => {
   return jest.fn()
 });
 
